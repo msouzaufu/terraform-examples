@@ -6,11 +6,22 @@ terraform {
       source  = "hashicorp/aws"
       version = "4.24.0"
     }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "2.2.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.3.2"
+    }
+    template = {
+      source  = "hashicorp/template"
+      version = "2.2.0"
+    }
   }
 
-  backend "s3" {}
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
